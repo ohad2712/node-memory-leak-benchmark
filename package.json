@@ -13,7 +13,7 @@
     "url": "git+https://github.com/ohad2712/node-memory-leak-benchmark.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ohad Finkelstein",
   "license": "ISC",
   "type": "module",
   "bugs": {
