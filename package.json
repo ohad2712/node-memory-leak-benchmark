@@ -1,0 +1,26 @@
+{
+  "name": "memory-leak-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "bench:leak": "autocannon -c 50 -d 10 -m POST --body \"$(printf 'x%.0s' {1..10000})\" http://localhost:3000/leak",
+    "bench:fixed": "autocannon -c 50 -d 10 -m POST --body \"$(printf 'x%.0s' {1..10000})\" http://localhost:3000/fixed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohad2712/node-memory-leak-benchmark.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ohad2712/node-memory-leak-benchmark/issues"
+  },
+  "homepage": "https://github.com/ohad2712/node-memory-leak-benchmark#readme",
+  "dependencies": {
+    "autocannon": "^8.0.0"
+  }
+}
